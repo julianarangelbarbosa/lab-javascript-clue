@@ -93,31 +93,23 @@ const weaponsArray =
 
 function selectRandom(arr) {
  
-    let i= Math.floor(Math.random()*arr.length);
+    let i= Math.floor((Math.random()*arr.length));
 
-    return arr[i];}
+    return arr[i];
+}
 
-    console.log(selectRandom(suspectsArray));
+   // console.log(selectRandom(suspectsArray));
  
 
 
-function pickMystery(arr1, arr2, arr3) {
-
-   let s = selectRandom(arr1);
-   let w = selectRandom(arr2);
-   let r = selectRandom(arr3); 
-   //console.log(`aqui ${w}`);
-    
-    //let i= Math.floor(Math.random()*arr1.length);
-    let newArray ={s,w,r};
-
-    //newArray.suspect = suspectsArray[i];
-    //newArray.weapon = weaponsArray[i];
-    //newArray.room = roomsArray[i];
-
-    return newArray;
+function pickMystery() {
+   let suspect = selectRandom(suspectsArray);
+   let weapon = selectRandom(weaponsArray);
+   let room = selectRandom(roomsArray); 
+   let newArray ={suspect, weapon, room};
+   return newArray;
 }
-console.log(pickMystery(suspectsArray, roomsArray, weaponsArray));
+//console.log(pickMystery(suspectsArray, roomsArray, weaponsArray));
 
 // ITERATION 3
 
